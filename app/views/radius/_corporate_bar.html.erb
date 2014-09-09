@@ -1,12 +1,12 @@
 <div id="corporate_bar">
-  <div>
-    <span class="brand">
-      <a href="http://radiusnetworks.com">
-        <img height="15" src="#{image_path("corporate-bar-logo.png")}">
+  <div class="corporate-bar-content">
+    <span class="corporate-bar-brand">
+      <a href="http://www.radiusnetworks.com">
+        <img height="15" src="<%= image_path("corporate-bar-logo.png") %>">
         Radius Networks
       </a>
     </span>
-    <ul style="float:right;">
+    <ul class="corporate-bar-nav" style="float:right;">
       <li>
         <a href="http://store.radiusnetworks.com">
           <i class="fa fa-shopping-cart">
@@ -15,11 +15,15 @@
         </a>
       </li>
       <li>
-        <a href="/auth/radius">
-          <i class="fa fa-sign-in">
-          </i>
-          Sign In
-        </a>
+          <% if current_user %>
+            <a href="<%=sign_out_path%>">
+              <i class="fa fa-sign-out"></i> Sign Out
+          </a>
+          <% else %>
+            <a href="<%=sign_in_path%>">
+              <i class="fa fa-sign-in"></i> Sign In
+            </a>
+          <% end %>
       </li>
     </ul>
   </div>
