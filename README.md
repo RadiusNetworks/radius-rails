@@ -53,7 +53,7 @@ Add the `environment_ribbon` partial right after the opening body tag.
 
 ```slim
 body
-  = render 'radius/environment_ribbon'
+  == render 'radius/environment_ribbon'
 ```
 
 #### Corporate Bar Header
@@ -62,13 +62,13 @@ Add the `corporate_bar` partial right after the opening body tag.
 
 ```slim
 body
-  = render 'radius/corporate_bar'
+  == render 'radius/corporate_bar'
 ```
 
 #### Google Analytics
 
 ```slim
-= render 'radius/ga'
+== render 'radius/ga'
 ```
 
 #### Zendesk Support Tab
@@ -77,7 +77,7 @@ Most of the time you only want this on some views, so you can optionally include
 
 ```slim
 - if !(controller_name == "static" && action_name == "index")
-  = render 'radius/zendesk'
+  == render 'radius/zendesk'
 ```
 
 
