@@ -1,0 +1,56 @@
+#corporate_bar{
+
+  background: #45484d; /* Old browsers */
+  background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+  width: 100%;
+  border-bottom: thin solid black;
+  text-shadow: #777 0px -1px 0px;
+  a {
+    color: #DEDEDE;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .corporate-bar-content {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    max-width: $page-width;
+    margin: 0 auto;
+    vertical-align: middle;
+    font-weight: 100;
+    padding: 8px;
+    font-size: 12px;
+    @include clearfix;
+  }
+  .corporate-bar-brand {
+    float: left;
+    img {
+      height: 15px;
+      width: 15px;
+      padding-right: 3px;
+      float: left;
+    }
+  }
+
+  ul.corporate-bar-nav {
+    display: inline-block;
+    margin: 0;
+    float: right;
+    li {
+      margin: 0;
+      list-style:none;
+      display: inline-block;
+      padding-left: 25px;
+    }
+    i {
+      padding-right: 5px;
+    }
+  }
+}

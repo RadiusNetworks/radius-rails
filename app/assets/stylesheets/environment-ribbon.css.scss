@@ -1,0 +1,17 @@
+#environment_ribbon {
+  font-size: 12px;
+  z-index: 100000;
+  position: fixed;
+  top: 0;
+  background-color: #4183C4;
+  background-color: $orange;
+  color: white;
+  padding: 3px 10px 5px 10px;
+  text-align: center;
+  top: 25px;
+  right: -70px;
+  @include transform(rotate(45deg));
+  width: 200px;
+  @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.15));
+  border: thin dashed white;
+}

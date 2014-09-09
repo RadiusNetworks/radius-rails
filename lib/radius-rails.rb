@@ -1,0 +1,1 @@
+require "radius/rails"
