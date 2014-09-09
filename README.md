@@ -15,7 +15,7 @@ gem 'radius-rails', github: "RadiusNetworks/radius-rails"
 
 This will give you access to the common Radius Networks assets needed in most web apps.
 
-### Stylesheets
+### Stylesheets and Images
 
 Stylesheets can be pulled in with the [asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html) or using [Sass](http://sass-lang.com/):
 
@@ -26,13 +26,28 @@ Stylesheets can be pulled in with the [asset pipeline](http://guides.rubyonrails
 @import "environment-ribbon";
 ```
 
+You can pull in the favicon by adding the image to the header of your layout:
+
+```slim
+head
+  link href="#{image_path("favicon.ico")}" rel="shortcut icon"
+```
+
 Take a look in the [`app/assets`](app/assets) to see what is included with the gem.
+
+### Generators
+
+You can generate the error pages in `public/` by running the generator:
+
+```
+rails generate radius:error_pages
+```
 
 ### View Partials
 
 A few common partials that are needed across apps.
 
-Environment Ribbon
+#### Environment Ribbon
 
 Add the `environment_ribbon` partial right after the opening body tag.
 
@@ -41,7 +56,7 @@ body
   = render 'radius/environment_ribbon'
 ```
 
-Corporate Bar Header
+#### Corporate Bar Header
 
 Add the `corporate_bar` partial right after the opening body tag.
 
@@ -50,13 +65,13 @@ body
   = render 'radius/corporate_bar'
 ```
 
-Google Analytics
+#### Google Analytics
 
 ```slim
 = render 'radius/ga'
 ```
 
-Zendesk Support Tab
+#### Zendesk Support Tab
 
 Most of the time you only want this on some views, so you can optionally include it by checking the `controller_name`.
 
