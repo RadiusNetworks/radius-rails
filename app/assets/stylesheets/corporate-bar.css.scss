@@ -1,4 +1,4 @@
-$page-width: 960px !default;
+$max-width: 960px !default; /* Neat's grid width setting */
 
 #corporate_bar {
   background: #45484d; /* Old browsers */
@@ -22,7 +22,7 @@ $page-width: 960px !default;
   }
   .corporate-bar-content {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    max-width: $page-width;
+    max-width: $max-width;
     margin: 0 auto;
     vertical-align: middle;
     font-weight: 100;
