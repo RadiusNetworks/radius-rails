@@ -13,7 +13,6 @@ $max-width: 960px !default; /* Neat's grid width setting */
   width: 100%;
   border-bottom: thin solid black;
   text-shadow: #777 0px -1px 0px;
-  line-height: 1.25;
   a {
     color: #DEDEDE;
     text-decoration: none;
@@ -29,6 +28,7 @@ $max-width: 960px !default; /* Neat's grid width setting */
     font-weight: 100;
     padding: 8px;
     font-size: 12px;
+    line-height: 1.25;
     &:after {
       content:"";
       display:table;
