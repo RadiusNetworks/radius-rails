@@ -13,6 +13,10 @@ $max-width: 960px !default; /* Neat's grid width setting */
   width: 100%;
   border-bottom: thin solid black;
   text-shadow: #777 0px -1px 0px;
+  i {
+    color: #DEDEDE;
+  }
+
   a {
     color: #DEDEDE;
     text-decoration: none;
