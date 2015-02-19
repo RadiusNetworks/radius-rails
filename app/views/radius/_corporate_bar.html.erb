@@ -16,7 +16,10 @@
       </li>
       <% if current_user %>
         <li>
-          <a href="http://account.radiusnetworks.com"> <i class="fa fa-user"></i> Account </a>
+        <a href="<%=kracken_url%>"> <i class="fa fa-user"></i> Account </a>
+        </li>
+        <li>
+        <a href="<%=kracken_url%>/teams"> <i class="fa fa-users"></i> Teams </a>
         </li>
         <li>
           <a href="<%=sign_out_path%>"> <i class="fa fa-sign-out"></i> Sign Out </a>
