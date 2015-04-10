@@ -1,4 +1,4 @@
-<% if cookies[:_radius_user_masquerade] && current_user %>
+<% if defined?(Kracken::PROVIDER_URL) && cookies[:_radius_user_masquerade] && current_user %>
   <div id="masquerade">
     <div>
       Masquerading as <%=current_user.name %> &lt;<%=current_user.email %>&gt; |
