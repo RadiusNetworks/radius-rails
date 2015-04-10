@@ -1,3 +1,12 @@
+<% if cookies[:_radius_user_masquerade] && current_user %>
+  <div id="masquerade">
+    <div>
+      Masquerading as <%=current_user.name %> &lt;<%=current_user.email %>&gt; |
+      <%= link_to "Sign Out", "#{kracken_url}/admin/masquerade/destroy" %>
+    </div>
+  </div>
+<% end %>
+
 <div id="corporate_bar">
   <div class="corporate-bar-content">
     <span class="corporate-bar-brand">
