@@ -1,0 +1,23 @@
+{
+  "name": "jqGrid",
+  "main": [
+    "js/i18n/grid.locale-en.js",
+    "js/jquery.jqGrid.js",
+    "css/ui.jqgrid.css"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.0",
+    "jquery-ui": ">=1.7.0"
+  },
+  "homepage": "https://github.com/tonytomov/jqGrid",
+  "version": "5.0.1",
+  "_release": "5.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.1",
+    "commit": "2f7e41453a133b1443c205e95a8f91801dcfaa8a"
+  },
+  "_source": "git://github.com/tonytomov/jqGrid.git",
+  "_target": "5.0.1",
+  "_originalSource": "jqgrid"
+}
