@@ -1,9 +1,9 @@
 // ========================================================================
 //   Component: top-navbar.less
 // ========================================================================
- 
+
 //
-// Horizontal top navbar 
+// Horizontal top navbar
 // based on the bootstrap navbar styles and markup
 // ----------------------------------------------------
 
@@ -11,7 +11,7 @@
 @mixin gradient-remove() {
   background-image: none;
   background-repeat: no-repeat;
-  filter: none;  
+  filter: none;
 }
 
 $nav-header-wd:                 $aside-wd;
@@ -68,29 +68,30 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
     position: relative;
     // overlaps nav-wrapper
     z-index: 11;
-    
+
     // Reset default to allow handle via different logo size
     .navbar-brand {
       padding: 0;
     }
-    
+
     // Different Logo size depends on the navbar state
     .brand-logo,
-    .brand-logo-collapsed { 
+    .brand-logo-collapsed {
       > img {
         margin: 0 auto;
+        max-height: 30px;
       }
     }
-    .brand-logo { 
-      display: block; 
+    .brand-logo {
+      display: block;
       padding: 10px 15px;
     }
-    .brand-logo-collapsed { 
-      display: none; 
+    .brand-logo-collapsed {
+      display: none;
       padding: 6px 15px;
     }
   }
-  
+
   .navbar-nav > li > a,
   .navbar-nav > .open > a {
     color: $nav-top-item-mobile;
@@ -123,7 +124,7 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
       color: $nav-top-item-desktop;
     }
   }
-  
+
 }
 
 @media only screen and (max-width: $mq-up-to-tablet) {
@@ -155,7 +156,7 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
     position: static;
     float: left;
   }
-  
+
   // fullwidth dropdowns
   .navbar-nav .open .dropdown-menu {
     position: absolute;
@@ -170,7 +171,7 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
 // Navbar Search Form
 // ------------------------------
 .topnavbar {
-  
+
   .navbar-form {
     position: absolute;
     top: -100%;
@@ -215,7 +216,7 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
   @media only screen and (min-width: $mq-tablet) {
     .navbar-form {
       left: $nav-header-wd;
-    } 
+    }
   }
 
 }
@@ -231,7 +232,7 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
     border: 0;
     background-color: $nav-top-bg;
     @include gradient-horizontal($nav-top-bg-start, $nav-top-bg-end);
-    
+
     .navbar-header {
       @include gradient-remove();
     }
@@ -278,7 +279,7 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
       position: relative;
     }
 
-    // restore opened dropdown 
+    // restore opened dropdown
     .navbar-nav .open .dropdown-menu {
       left: auto;
       right: auto;
