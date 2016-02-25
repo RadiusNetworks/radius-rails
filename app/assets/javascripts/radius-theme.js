@@ -1,4 +1,4 @@
-//= require_tree ./angle/
+//= require_tree ./radius-theme/
 //= require modernizr/modernizr.custom
 //= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap
