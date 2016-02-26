@@ -79,12 +79,14 @@ $nav-top-item-desktop-active:   $nav-top-item-mobile-active;
     .brand-logo-collapsed {
       > img {
         margin: 0 auto;
-        max-height: 30px;
       }
     }
     .brand-logo {
       display: block;
       padding: 10px 15px;
+      > img {
+        max-height: 40px;
+      }
     }
     .brand-logo-collapsed {
       display: none;
