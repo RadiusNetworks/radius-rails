@@ -6,5 +6,4 @@
 //= require animo.js/animo
 //= require slimScroll/jquery.slimscroll.min
 //= require screenfull/dist/screenfull
-//= require jquery-localize-i18n/dist/jquery.localize
 //= require_tree ./radius-theme/

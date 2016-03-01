@@ -1,12 +1,12 @@
 /*!
- * 
+ *
  * Angle - Bootstrap Admin App + Ruby on Rails
- * 
+ *
  * Version: 3.2.0
  * Author: @themicon_co
  * Website: http://themicon.co
  * License: https://wrapbootstrap.com/help/licenses
- * 
+ *
  */
 
 
@@ -17,10 +17,10 @@
   $(function(){
 
     // Restore body classes
-    // ----------------------------------- 
+    // -----------------------------------
     var $body = $('body');
     new StateToggler().restoreState( $body );
-    
+
     // enable settings toggle after restore
     $('#chk-fixed').prop('checked', $body.hasClass('layout-fixed') );
     $('#chk-collapsed').prop('checked', $body.hasClass('aside-collapsed') );
@@ -29,7 +29,7 @@
     $('#chk-hover').prop('checked', $body.hasClass('aside-hover') );
 
     // When ready display the offsidebar
-    $('.offsidebar.hide').removeClass('hide');      
+    $('.offsidebar.hide').removeClass('hide');
 
   }); // doc ready
 
