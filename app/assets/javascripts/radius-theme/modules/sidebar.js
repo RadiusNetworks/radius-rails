@@ -1,5 +1,5 @@
 // SIDEBAR
-// ----------------------------------- 
+// -----------------------------------
 
 
 (function(window, document, $, undefined){
@@ -17,9 +17,9 @@
     $body    = $('body');
     $sidebar = $('.sidebar');
     mq       = APP_MEDIAQUERY;
-    
-    // AUTOCOLLAPSE ITEMS 
-    // ----------------------------------- 
+
+    // AUTOCOLLAPSE ITEMS
+    // -----------------------------------
 
     var sidebarCollapse = $sidebar.find('.collapse');
     sidebarCollapse.on('show.bs.collapse', function(event){
@@ -29,10 +29,10 @@
         sidebarCollapse.filter('.in').collapse('hide');
 
     });
-    
-    // SIDEBAR ACTIVE STATE 
-    // ----------------------------------- 
-    
+
+    // SIDEBAR ACTIVE STATE
+    // -----------------------------------
+
     // Find current active item
     var currentItem = $('.sidebar .active').parents('li');
 
@@ -49,7 +49,7 @@
     });
 
     // SIDEBAR COLLAPSED ITEM HANDLER
-    // ----------------------------------- 
+    // -----------------------------------
 
 
     var eventName = isTouch() ? 'click' : 'mouseenter' ;
@@ -61,7 +61,7 @@
         subNav.trigger('mouseleave');
         subNav = toggleMenuItem( $(this) );
 
-        // Used to detect click and touch events outside the sidebar          
+        // Used to detect click and touch events outside the sidebar
         sidebarAddBackdrop();
       }
 
@@ -81,7 +81,7 @@
             ! $target.is('#user-block-toggle') && // user block toggle anchor
             ! $target.parent().is('#user-block-toggle') // user block toggle icon
           ) {
-                $body.removeClass('aside-toggled');          
+                $body.removeClass('aside-toggled');
         }
 
       });
@@ -96,7 +96,7 @@
     });
   }
 
-  // Open the collapse sidebar submenu items when on touch devices 
+  // Open the collapse sidebar submenu items when on touch devices
   // - desktop only opens on hover
   function toggleTouchItem($element){
     $element
@@ -107,13 +107,13 @@
   }
 
   // Handles hover to open items under collapsed menu
-  // ----------------------------------- 
+  // -----------------------------------
   function toggleMenuItem($listItem) {
 
     removeFloatingNav();
 
     var ul = $listItem.children('ul');
-    
+
     if( !ul.length ) return $();
     if( $listItem.hasClass('open') ) {
       toggleTouchItem($listItem);
@@ -126,7 +126,7 @@
     var mar = parseInt( $asideInner.css('padding-top'), 0) + parseInt( $aside.css('padding-top'), 0);
 
     var subNav = ul.clone().appendTo( $aside );
-    
+
     toggleTouchItem($listItem);
 
     var itemTop = ($listItem.position().top + mar) - $sidebar.scrollTop();
@@ -174,3 +174,4 @@
   }
 
 })(window, document, window.jQuery);
+
