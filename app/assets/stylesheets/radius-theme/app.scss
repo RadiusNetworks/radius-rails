@@ -130,9 +130,9 @@
 @import "app/todo";
 @import "app/nestable";
 
-// Charts
-@import "app/chart-flot";
-@import "app/chart-easypie";
+// Charts - comment out to avoid flot issue
+//@import "app/chart-flot";
+//@import "app/chart-easypie";
 
 // Form elements
 @import "app/form-elements";
