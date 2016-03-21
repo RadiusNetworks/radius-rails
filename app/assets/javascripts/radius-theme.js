@@ -6,4 +6,7 @@
 //= require animo.js/animo
 //= require slimScroll/jquery.slimscroll.min
 //= require screenfull/dist/screenfull
+//
+//= stub flot/Makefile
+//
 //= require_tree ./radius-theme/
