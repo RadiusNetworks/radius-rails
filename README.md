@@ -11,6 +11,12 @@ gem 'radius-rails', github: "RadiusNetworks/radius-rails"
 
 ```
 
+Note: If the app you are using doesn't use the updated Twitter Bootstrap Theme, then you will want to use the tag `v0.1.0`:
+
+```ruby
+gem 'radius-rails', github: "RadiusNetworks/radius-rails", tag: "v0.1.0"
+```
+
 ## Usage
 
 This will give you access to the common Radius Networks assets needed in most web apps.
@@ -20,10 +26,8 @@ This will give you access to the common Radius Networks assets needed in most we
 Stylesheets can be pulled in with the [asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html) or using [Sass](http://sass-lang.com/):
 
 ```scss
-@import "normalize";
-@import "font-awesome";
-@import "bonveno-webfont";
-@import "environment-ribbon";
+@import "radius-theme";
+@import "corporate-bar";
 ```
 
 You can pull in the favicon by adding the image to the header of your layout:
@@ -56,28 +60,9 @@ body
   == render 'radius/environment_ribbon'
 ```
 
-#### Corporate Bar Header
-
-Add the `corporate_bar` partial right after the opening body tag.
-
-```slim
-body
-  == render 'radius/corporate_bar'
-```
-
 #### Google Analytics
 
 ```slim
 == render 'radius/ga'
 ```
-
-#### Zendesk Support Tab
-
-Most of the time you only want this on some views, so you can optionally include it by checking the `controller_name`.
-
-```slim
-- if !(controller_name == "static" && action_name == "index")
-  == render 'radius/zendesk'
-```
-
 
