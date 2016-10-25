@@ -109,6 +109,7 @@
 @import "app/top-navbar";
 @import "app/sidebar";
 @import "app/offsidebar";
+@import "app/footer";
 
 // Components
 @import "app/breadcrumbs";
@@ -179,3 +180,5 @@
 @import "weather-icons";
 @import "font-awesome";
 
+//customized
+@import "app/customizations"
