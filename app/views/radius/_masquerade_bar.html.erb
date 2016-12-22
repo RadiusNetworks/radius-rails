@@ -1,0 +1,9 @@
+<% if masquerading? %>
+  <div id="masquerade">
+    <div>
+      Masquerading as <%=current_user.name %> &lt;<%=current_user.email %>&gt;
+      <%= link_to "Sign Out", end_masquerade_path %>
+    </div>
+  </div>
+<% end %>
+

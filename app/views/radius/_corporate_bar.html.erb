@@ -1,13 +1,6 @@
-<% if masquerading? %>
-  <div id="masquerade">
-    <div>
-      Masquerading as <%=current_user.name %> &lt;<%=current_user.email %>&gt;
-      <%= link_to "Sign Out", end_masquerade_path %>
-    </div>
-  </div>
-<% end %>
-
 <div id="corporate_bar">
+  <%== render 'radius/masquerade_bar' %>
+
   <div class="corporate-bar-content">
     <span class="corporate-bar-brand">
       <a href="http://www.radiusnetworks.com">
