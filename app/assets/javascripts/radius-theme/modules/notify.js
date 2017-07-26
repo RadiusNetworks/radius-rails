@@ -12,52 +12,37 @@
   var Selector = '[data-notify]',
       autoloadSelector = '[data-onload]',
       doc = $(document);
-
-
   $(function() {
-
     $(Selector).each(function(){
-
       var $this  = $(this),
           onload = $this.data('onload');
-
       if(onload !== undefined) {
         setTimeout(function(){
           notifyNow($this);
         }, 800);
       }
-
       $this.on('click', function (e) {
         e.preventDefault();
         notifyNow($this);
       });
-
     });
-
   });
 
   function notifyNow($element) {
       var message = $element.data('message'),
           options = $element.data('options');
-
       if(!message)
         $.error('Notify: No message specified');
-     
       $.notify(message, options || {});
   }
-
-
 }(jQuery, window, document));
-
 
 /**
  * Notify Addon definition as jQuery plugin
  * Adapted version to work with Bootstrap classes
  * More information http://getuikit.com/docs/addons_notify.html
  */
-
 (function($, window, document){
-
     var containers = {},
         messages   = {},
 
