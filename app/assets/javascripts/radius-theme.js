@@ -7,7 +7,7 @@
 //= require chosen_v1.2.0/chosen.jquery
 //= require moment/moment
 //= require moment-timezone/moment-timezone-with-data
-//= require eonasdan-bootstrap-datetimepicker
+//= require eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker
 //= require flatdoc/flatdoc
 //= require slimScroll/jquery.slimscroll.min
 //= require screenfull/dist/screenfull
