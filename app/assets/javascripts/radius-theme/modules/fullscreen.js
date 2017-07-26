@@ -1,12 +1,8 @@
-// FULLSCREEN
-// ----------------------------------- 
+//= require screenfull/dist/screenfull
 
 (function(window, document, $, undefined){
-
   if ( typeof screenfull === 'undefined' ) return;
-
   $(function(){
-
     var $doc = $(document);
     var $fsToggler = $('[data-toggle-fullscreen]');
 
@@ -23,12 +19,9 @@
         e.preventDefault();
 
         if (screenfull.enabled) {
-          
           screenfull.toggle();
-          
           // Switch icon indicator
           toggleFSIcon( $fsToggler );
-
         } else {
           console.log('Fullscreen not enabled');
         }
@@ -45,7 +38,5 @@
       else
         $element.children('em').removeClass('fa-compress').addClass('fa-expand');
     }
-
   });
-
 })(window, document, window.jQuery);
