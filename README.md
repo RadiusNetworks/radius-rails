@@ -27,7 +27,6 @@ Stylesheets can be pulled in with the [asset pipeline](http://guides.rubyonrails
 
 ```scss
 @import "radius-theme";
-@import "corporate-bar";
 ```
 
 You can pull in the favicon by adding the image to the header of your layout:
