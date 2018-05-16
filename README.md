@@ -58,10 +58,3 @@ Add the `environment_ribbon` partial right after the opening body tag.
 body
   == render 'radius/environment_ribbon'
 ```
-
-#### Google Analytics
-
-```slim
-== render 'radius/ga'
-```
-
