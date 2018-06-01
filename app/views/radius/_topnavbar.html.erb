@@ -1,0 +1,111 @@
+<!--START Top Navbar-->
+<nav class="navbar topnavbar" role="navigation">
+  <!--START navbar header-->
+  <div class="navbar-header">
+    <a class="navbar-brand" href="//www.radiusnetworks.com/">
+      <div class="brand-logo">
+        <img alt="App Logo" class="img-responsive" src="<%= image_path('radius-theme/logo.png') %>" />
+      </div>
+      <div class="brand-logo-collapsed">
+        <img alt="App Logo" class="img-responsive" src="<%= image_path('radius-theme/logo-single.png') %>" />
+      </div>
+    </a>
+  </div>
+  <!--END navbar header-->
+  <!--START Nav wrapper-->
+  <div class="nav-wrapper">
+    <!--START Left navbar-->
+    <ul class="nav navbar-nav">
+      <li>
+        <!--Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+        <a class="hidden-xs" data-toggle-state="aside-collapsed" href="#">
+          <em class="fa fa-navicon">
+          </em>
+        </a>
+        <!--Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+        <a class="visible-xs sidebar-toggle" data-no-persist="true" data-toggle-state="aside-toggled" href="#">
+          <em class="fa fa-navicon">
+          </em>
+        </a>
+      </li>
+      <li>
+        <a href="//store.radiusnetworks.com" title="Radius Networks Store">
+          <em class="icon-basket">
+          </em>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <!--Search icon-->
+      <!--li-->
+      <!-- a data-search-open="" href="#"-->
+      <!--   em.icon-magnifier-->
+      <!--User Drop Down-->
+      <li class="dropdown dropdown-list">
+        <a data-toggle="dropdown" href="#">
+          <em class="icon-user">
+          </em>
+        </a>
+        <!--START Dropdown menu-->
+        <ul class="dropdown-menu animated flipInX">
+          <li>
+            <!--START list group-->
+            <div class="list-group">
+              <a class="list-group-item" href="<%= signout_user_path %>">
+                <div class="media-box">
+                  <div class="pull-left">
+                    <em class="fa fa-sign-out fa-2x text-info">
+                    </em>
+                  </div>
+                  <div class="media-box-body clearfix">
+                    <p class="m0">Sign Out</p>
+                    <p class="m0 text-muted">
+                    <small>Signed in as <%= current_user.email %></small>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <!--list item-->
+              <a class="list-group-item" href="<%= manage_user_path %>">
+                <div class="media-box">
+                  <div class="pull-left">
+                    <em class="fa fa-user fa-2x text-success">
+                    </em>
+                  </div>
+                  <div class="media-box-body clearfix">
+                    <p class="m0">User Account</p>
+                    <p class="m0 text-muted">
+                    <small>Edit Account Details</small>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <!--list item-->
+              <a class="list-group-item" href="<%= manage_teams_path %>">
+                <div class="media-box">
+                  <div class="pull-left">
+                    <em class="fa fa-users fa-2x text-warning">
+                    </em>
+                  </div>
+                  <div class="media-box-body clearfix">
+                    <p class="m0">Teams</p>
+                    <p class="m0 text-muted">
+                    <small>
+                      You belong to <%= pluralize(current_user.accounts.count ,"team") %>
+                    </small>
+
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <!--END Contacts menu-->
+    </ul>
+    <!--END Right Navbar-->
+  </div>
+  <!--END Nav wrapper-->
+</nav>
+<!--END Top Navbar-->
