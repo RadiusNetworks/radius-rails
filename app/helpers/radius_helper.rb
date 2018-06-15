@@ -26,5 +26,23 @@ module RadiusHelper
     end
   end
 
+  def signout_user_path
+    if respond_to?(:destroy_user_session_path)
+      destroy_user_session_path
+    else
+      "#{kracken_url}/users/sign_out"
+    end
+  end
 
+  def manage_user_path
+    if respond_to?(:edit_user_registration_path)
+      edit_user_registration_path
+    else
+      "#{kracken_url}/users/edit"
+    end
+  end
+
+  def manage_teams_path
+    "#{kracken_url}/teams"
+  end
 end
