@@ -2,7 +2,7 @@
 <nav class="navbar topnavbar" role="navigation">
   <!--START navbar header-->
   <div class="navbar-header">
-    <a class="navbar-brand" href="//www.radiusnetworks.com/">
+    <a class="navbar-brand" href="https://www.radiusnetworks.com/">
       <div class="brand-logo">
         <img alt="App Logo" class="img-responsive" src="<%= image_path('radius-theme/logo.png') %>" />
       </div>
@@ -29,7 +29,7 @@
         </a>
       </li>
       <li>
-        <a href="//store.radiusnetworks.com" title="Radius Networks Store">
+        <a href="https://store.radiusnetworks.com" title="Radius Networks Store">
           <em class="icon-basket">
           </em>
         </a>
@@ -81,23 +81,24 @@
                 </div>
               </a>
               <!--list item-->
-              <a class="list-group-item" href="<%= manage_teams_path %>">
-                <div class="media-box">
-                  <div class="pull-left">
-                    <em class="fa fa-users fa-2x text-warning">
-                    </em>
+              <% if current_user.respond_to? :teams %>
+                <a class="list-group-item" href="<%= manage_teams_path %>">
+                  <div class="media-box">
+                    <div class="pull-left">
+                      <em class="fa fa-users fa-2x text-warning">
+                      </em>
+                    </div>
+                    <div class="media-box-body clearfix">
+                      <p class="m0">Teams</p>
+                      <p class="m0 text-muted">
+                      <small>
+                        You belong to <%= pluralize(current_user.teams.count ,"team") %>
+                      </small>
+                      </p>
+                    </div>
                   </div>
-                  <div class="media-box-body clearfix">
-                    <p class="m0">Teams</p>
-                    <p class="m0 text-muted">
-                    <small>
-                      You belong to <%= pluralize(current_user.accounts.count ,"team") %>
-                    </small>
-
-                    </p>
-                  </div>
-                </div>
-              </a>
+                </a>
+              <% end %>
             </div>
           </li>
         </ul>
