@@ -1,0 +1,27 @@
+.content-heading
+  .btn-toolbar.pull-right
+    | <%= plural_table_name.titleize %>
+  | <%= plural_table_name.titleize %>
+
+ol.breadcrumb
+  li = link_to '<%= plural_table_name.titleize %>', <%= index_helper %>_path
+
+.row
+  .col-sm-12
+    .panel.panel-default
+      .panel-heading
+        | My <%= plural_table_name.titleize %>
+
+      table.table.table-hover.table-generic
+        thead
+          tr
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+            th <%= attribute.human_name %>
+<% end -%>
+
+        tbody
+          - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
+            tr
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+              td = <%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
