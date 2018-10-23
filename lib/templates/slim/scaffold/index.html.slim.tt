@@ -1,27 +1,32 @@
 .content-heading
   .btn-toolbar.pull-right
-    | <%= plural_table_name.titleize %>
+    = link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_table_name %>_path, class: 'btn btn-sm btn-success', title: "Create new <%= singular_table_name %>"
   | <%= plural_table_name.titleize %>
 
 ol.breadcrumb
   li = link_to '<%= plural_table_name.titleize %>', <%= index_helper %>_path
 
 .row
-  .col-sm-12
+  .col-lg-12
     .panel.panel-default
       .panel-heading
-        | My <%= plural_table_name.titleize %>
-
-      table.table.table-hover.table-generic
-        thead
-          tr
-<% attributes.reject(&:password_digest?).each do |attribute| -%>
-            th <%= attribute.human_name %>
-<% end -%>
-
-        tbody
-          - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
+      .table-responsive
+        table.table.table-hover.table-generic
+          thead
             tr
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
-              td = <%= singular_table_name %>.<%= attribute.name %>
+              th <%= attribute.human_name %>
 <% end -%>
+              th
+              th
+              th
+
+          tbody
+            - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
+              tr
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+                td = <%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+                td = link_to 'Show', <%= singular_table_name %>
+                td = link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
+                td = link_to 'Destroy', <%= singular_table_name %>, method: :delete, data: { confirm: 'Are you sure?' }

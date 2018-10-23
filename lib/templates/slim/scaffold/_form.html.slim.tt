@@ -1,14 +1,10 @@
 = form_for @<%= singular_table_name %> do |f|
   .row
-    .col-lg-8
-      = render "layouts/partials/form_errors", resource: @<%= singular_table_name %>
-
-  .row
-    .col-lg-8
+    .col-sm-12.col-md-10.col-lg-8
       .panel.panel-default
-        .panel-heading
-          .panel-title <%= singular_table_name.titleize %> Details
+
         .panel-body
+          = render "layouts/partials/form_errors", resource: @<%= singular_table_name %>
 <% attributes.each do |attribute| -%>
           .form-group.has-feedback
 <% if attribute.password_digest? -%>
@@ -36,9 +32,6 @@
 <% end -%>
 <% end -%>
 
-  .row
-    .col-lg-8
-      .panel.panel-default
-        .panel-body
+        .panel-footer
           = f.submit class: "btn btn-sm pull-right btn-primary"
           = link_to 'Cancel', <%= index_helper %>_url, class: "btn btn-sm btn-default"
