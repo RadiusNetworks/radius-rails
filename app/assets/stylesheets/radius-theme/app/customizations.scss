@@ -2,3 +2,20 @@
   float: none;
   margin: 0 auto;
 }
+
+.table-generic tr td a {
+  display: block;
+  text-decoration: none;
+  color: #656565;
+  &:hover {
+    color: #656565;
+    text-decoration: none;
+  }
+}
+
+.table.table-hover.table-generic {
+  th, td {
+    text-align: center;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,18 @@
+.content-heading
+  .btn-toolbar.pull-right
+    = link_to "Edit", edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-sm btn-info'
+  | <%= singular_table_name.titleize %>
+
+ol.breadcrumb
+  li
+    = link_to "<%= plural_table_name.titleize %>", <%= index_helper %>_url
+
+.row
+  .col-sm-12.col-md-10.col-lg-8
+    .panel.panel-default
+      .panel-body
+<% attributes.each do |attribute| -%>
+        p
+          strong <%= attribute.human_name %>:
+          = @<%= singular_table_name %>.<%= attribute.name %>
+<% end -%>

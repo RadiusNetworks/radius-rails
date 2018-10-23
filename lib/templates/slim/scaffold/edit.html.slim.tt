@@ -1,0 +1,10 @@
+.content-heading
+  | Edit <%= singular_table_name.titleize %>
+
+ol.breadcrumb
+  li
+    = link_to "<%= plural_table_name.titleize %>", <%= index_helper %>_url
+  li
+    = link_to "Back", @<%= singular_table_name %>
+
+= render partial: 'form'
