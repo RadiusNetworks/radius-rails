@@ -4,7 +4,7 @@
       .panel.panel-default
 
         .panel-body
-          = render "layouts/partials/form_errors", resource: @<%= singular_table_name %>
+          = render "form_errors", resource: @<%= singular_table_name %>
 <% attributes.each do |attribute| -%>
           .form-group.has-feedback
 <% if attribute.password_digest? -%>
