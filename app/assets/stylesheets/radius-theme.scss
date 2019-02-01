@@ -1,3 +1,7 @@
 @import "radius-theme/app";
 @import "radius-theme/masquerade";
 
+// Radius Theme Customizations / Extensions
+.panel-errors {
+  padding: $panel-body-padding;
+}
