@@ -2,6 +2,20 @@
 @import "radius-theme/masquerade";
 
 // Radius Theme Customizations / Extensions
+.panel-body {
+  fieldset {
+    &.last-child,
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
 .panel-errors {
   padding: $panel-body-padding;
+
+  .alert {
+    margin-bottom: 0;
+    padding-bottom: $line-height-computed;
+  }
 }
