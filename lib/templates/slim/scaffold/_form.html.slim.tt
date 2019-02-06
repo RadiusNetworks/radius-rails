@@ -2,9 +2,11 @@
   .row
     .col-sm-12.col-md-10.col-lg-8
       .panel.panel-default
+        - if @<%= singular_table_name %>.errors.any?
+          .panel-errors
+            = render "form_errors", resource: @<%= singular_table_name %>
 
         .panel-body
-          = render "form_errors", resource: @<%= singular_table_name %>
 <% attributes.each do |attribute| -%>
           .form-group.has-feedback
 <% if attribute.password_digest? -%>
