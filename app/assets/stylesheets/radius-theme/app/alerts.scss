@@ -10,19 +10,19 @@ $alerts-z-index:                                9090;
 $alerts-width:                                  350px;
 
 // Color overrides
-.alert-success {
+.alert-success, .flash.notice {
   @include alert-variant($alert-flash-notice-bg, $alert-flash-notice-border, $alert-flash-notice-color);
 }
 
-.alert-info {
+.alert-info, .flash.info {
   @include alert-variant($alert-flash-info-bg, $alert-flash-info-border, $alert-flash-info-color);
 }
 
-.alert-warning {
+.alert-warning, .flash.warning {
   @include alert-variant($alert-flash-warning-bg, $alert-flash-warning-border, $alert-flash-warning-color);
 }
 
-.alert-danger {
+.alert-danger, .flash.error {
   @include alert-variant($alert-flash-error-bg, $alert-flash-error-border, $alert-flash-error-color);
 }
 
