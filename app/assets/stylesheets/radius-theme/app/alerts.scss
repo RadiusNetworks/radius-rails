@@ -9,6 +9,23 @@ $alerts-position:                               60px;
 $alerts-z-index:                                9090;
 $alerts-width:                                  350px;
 
+// Color overrides
+.alert-success {
+  @include alert-variant($alert-flash-notice-bg, $alert-flash-notice-border, $alert-flash-notice-color);
+}
+
+.alert-info {
+  @include alert-variant($alert-flash-info-bg, $alert-flash-info-border, $alert-flash-info-color);
+}
+
+.alert-warning {
+  @include alert-variant($alert-flash-warning-bg, $alert-flash-warning-border, $alert-flash-warning-color);
+}
+
+.alert-danger {
+  @include alert-variant($alert-flash-error-bg, $alert-flash-error-border, $alert-flash-error-color);
+}
+
 // Message container for positioning
 
 .alerts {
