@@ -11,7 +11,7 @@ module Radius
 
       initializer 'validating_enum.initialize' do
         ActiveSupport.on_load(:active_record) do
-          ActiveRecord::Base.send :extend, ValidatingEnum
+          ActiveRecord::Base.extend ValidatingEnum
         end
       end
     end
