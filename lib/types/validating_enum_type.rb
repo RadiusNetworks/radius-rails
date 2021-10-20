@@ -2,7 +2,9 @@
 
 # Ref: https://medium.com/nerd-for-tech/using-activerecord-enum-in-rails-35edc2e9070f
 class ValidateableEnumType < ActiveRecord::Enum::EnumType
-  # override the default behavior which normally bubbles an ArgumentError if the key is nonexistent
+  # This is called by the parent class when casting values from user provided input. The return
+  # value of this method is used as the return value from {#cast} when the value is not a defined
+  # enum. We return the user provided value so that the validator can catch issues later.
   #
   # @see https://github.com/rails/rails/blob/v5.2.6/activerecord/lib/active_record/enum.rb#L138-L142
   def assert_valid_value(value)
