@@ -5,8 +5,6 @@ module ValidatingEnum
   # Macro that wraps the standard Rails `enum` with additional type behavior to support
   # intutive validation of enum selections
   #
-  # Be sure to add `extend ValidatingEnum` to each model using this
-  #
   # @param definitions [Hash{Symbol => Object}]
   #   enum definition and configuration options
   #
