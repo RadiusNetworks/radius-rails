@@ -15,7 +15,7 @@ class ValidateableEnumType < ActiveRecord::Enum::EnumType
   #
   # @see https://github.com/rails/rails/blob/v5.2.6/activerecord/lib/active_record/enum.rb#L134-L136
   def serialize(value)
-    return unless value
+    return if value.blank?
 
     case
     when mapping.key?(value)
