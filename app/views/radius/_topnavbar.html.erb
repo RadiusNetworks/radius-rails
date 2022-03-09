@@ -43,8 +43,7 @@
       <!--User Drop Down-->
       <li class="dropdown dropdown-list">
         <a data-toggle="dropdown" href="#">
-          <em class="icon-user">
-          </em>
+          <%= fa_icon("fw user-o", text: "Welcome, #{current_user.first_name} |", right: true) %>
         </a>
         <!--START Dropdown menu-->
         <ul class="dropdown-menu animated flipInX">
