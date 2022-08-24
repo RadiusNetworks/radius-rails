@@ -1,9 +1,12 @@
+@use "sass:color";
+
 // Margins
 $sidepad:   30px;  // Padding to the left of the sidebar
 
 // Colors
 $txt:       #505050;
 $accent:    $gray-dark;
+$hover-color: scale-color($accent, $lightness: -20%);
 
 // Dimensions
 $sidebar-width:   180px;
@@ -43,7 +46,7 @@ $pre-width:       380px;
         color: $accent;
       }
       &:hover {
-        color: $accent*0.8;
+        color: $hover-color;
         background-color: rgba(255,255,255,.75);
         text-decoration: none;
       }
@@ -75,12 +78,12 @@ $pre-width:       380px;
         color: $txt !important;
       }
       font-weight: bold !important;
-      
+
       // Indicator
       &:after {
         content: '';
         display: block;
-        
+
         position: absolute;
         top: 50%;
         margin-top: -2px;
@@ -101,7 +104,7 @@ $pre-width:       380px;
   @media only screen and (min-width: $mq-tablet) {
     margin: -20px; // expand over wrapper padding
   }
-  
+
   .flatdoc {
     @media only screen and (min-width: $mq-tablet) {
       display: table;
@@ -135,7 +138,7 @@ $pre-width:       380px;
       @include menubar();
     }
   }
-  
+
   .flatdoc-content {
     @media only screen and (min-width: $mq-tablet) {
       display: table-cell;
@@ -148,7 +151,7 @@ $pre-width:       380px;
     padding-top: 1px;
     padding-bottom: 50px;
     background-color: #fff;
-    
+
     pre {
       background-color: #f3f6fb;
       border: 1px solid $gray;
@@ -170,7 +173,7 @@ $pre-width:       380px;
         }
       }
     }
-    
+
     > h1 {
       padding: 11px 0;
       margin: 0;
@@ -183,7 +186,7 @@ $pre-width:       380px;
       margin: 0 -20px;
     }
   }
-  
+
   .button {
     display: inline-block;
     padding: 6px 16px;
@@ -194,4 +197,3 @@ $pre-width:       380px;
   }
 
 }
-
