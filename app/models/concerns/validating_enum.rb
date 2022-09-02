@@ -1,7 +1,7 @@
 # # frozen_string_literal: true
 
 # # Ref: https://medium.com/nerd-for-tech/using-activerecord-enum-in-rails-35edc2e9070f
-# module ValidatingEnum
+module ValidatingEnum
 #   # Macro that wraps the standard Rails `enum` with additional type behavior to support
 #   # intutive validation of enum selections
 #   #
@@ -71,4 +71,4 @@
 #       end
 #     end
 #   end
-# end
+end
