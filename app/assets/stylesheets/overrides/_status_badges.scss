@@ -1,0 +1,39 @@
+.status {
+  --status-green: #77E46E;
+  --status-blue: #77C8EA;
+  --status-gray: #7A7A7A;
+  --status-gray-light: #AEAEAE;
+  --status-gray-dark: #4B4B4B;
+
+  color: var(--status-gray-dark);
+  background-color: inherit;
+
+
+  &.published {
+    font-weight: bold;
+    .indicator {
+      color: var(--status-green);
+    }
+  }
+
+  &.active {
+    font-weight: bold;
+    background-color: inherit !important;
+    .indicator {
+      color: var(--status-green);
+    }
+  }
+
+  &.draft {
+    .indicator {
+      color: var(--status-blue);
+    }
+  }
+
+  &.withdrawn, &.expired {
+    color: var(--status-gray);
+    .indicator {
+      color: var(--status-gray-light);
+    }
+  }
+}
