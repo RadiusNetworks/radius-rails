@@ -13,19 +13,6 @@ module RadiusHelper
     end
   end
 
-  def masquerading?
-    #session[:admin_user_id]
-    cookies[:_radius_user_masquerade] && current_user
-  end
-
-  def end_masquerade_path
-    if respond_to?(:masquerade_destroy_path)
-      masquerade_destroy_path
-    else
-      "#{kracken_url}/admin/masquerade/destroy"
-    end
-  end
-
   def signout_user_path
     if respond_to?(:destroy_user_session_path)
       destroy_user_session_path
